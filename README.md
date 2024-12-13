@@ -74,24 +74,31 @@ The output CSV includes the following columns:
 | **Preamble**                   | The bill’s full description starting with “A”.     |
 | **Word Link**                  | Link to the Word document version of the bill.     |
 
-How It Works
-    1.    The script parses the provided prefile_url to extract metadata (e.g., session, year, chamber, prefile number).
-    2.    It fetches the HTML content of the URL and identifies legislative entries.
-    3.    For each bill:
-        •    Extracts the bill number, summary, sponsors, committee, and preamble.
-        •    Fetches additional details, such as the Word document link.
-    4.    Outputs the data into a well-structured CSV file.
+### How It Works
 
-Troubleshooting
-    •    HTTP Errors: Ensure the provided prefile_url is valid and accessible.
-    •    Missing Data: If certain fields (e.g., sponsors or committees) are empty, check the HTML structure of the source page for inconsistencies.
-    •    Dependencies: Verify that requests and beautifulsoup4 are installed.
+1. The script parses the provided `prefile_url` to extract metadata (e.g., session, year, chamber, prefile number).
+2. It fetches the HTML content of the URL and identifies legislative entries.
+3. For each bill:
+   - Extracts the bill number, summary, sponsors, committee, and preamble.
+   - Fetches additional details, such as the Word document link.
+4. Outputs the data into a well-structured CSV file.
 
-Contributing
+---
+
+### Troubleshooting
+
+- **HTTP Errors**: Ensure the provided `prefile_url` is valid and accessible.
+- **Missing Data**: If certain fields (e.g., sponsors or committees) are empty, check the HTML structure of the source page for inconsistencies.
+- **Dependencies**: Verify that `requests` and `beautifulsoup4` are installed.
+
+---
+
+### Contributing
 
 Feel free to fork this project and submit pull requests for enhancements or bug fixes. Feedback and suggestions are always welcome!
 
-License
+---
 
-This project is open-source and available under the MIT License.
+### License
 
+This project is open-source and available under the [MIT License](LICENSE).
